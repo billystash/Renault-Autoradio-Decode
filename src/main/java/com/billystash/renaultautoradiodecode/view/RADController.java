@@ -40,7 +40,6 @@ public class RADController implements Initializable {
 
     /**
      * Function to determinate if code is valid.
-     * @param code
      * @return True if valid code, else False.
      */
     private boolean validCode(String code) {
@@ -91,8 +90,6 @@ public class RADController implements Initializable {
 
     /**
      * Function for open logs windows.
-     * @param title
-     * @param logs
      */
     public static void showDialog(String title, String logs) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
