@@ -1,5 +1,6 @@
 package com.billystash.renaultautoradiodecode.view;
 
+import com.billystash.renaultautoradiodecode.C.C;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,15 +19,13 @@ public class StartRAD extends Application {
 
     /**
      * Function for open main view
-     * @param stage
-     * @throws IOException
      */
     @Override
     public void start(Stage stage) throws IOException {
         LOGGER.info("Start Renault Autoradio Decode");
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/billystash/renaultautoradiodecode/RADMainView.fxml")));
         Scene scene = new Scene(root, 450, 200);
-        stage.setTitle("Renault Autoradio Decode");
+        stage.setTitle(String.format("Renault Autoradio Decode %s", C.VERSION));
         stage.getIcons().add(new Image(String.valueOf((getClass().getResource("/com/billystash/renaultautoradiodecode/images/renaultLogo.png")))));
         stage.setScene(scene);
         stage.show();
@@ -35,7 +34,6 @@ public class StartRAD extends Application {
 
     /**
      * Main function for start application.
-     * @param args
      */
     public static void main(String[] args) {
         launch();
