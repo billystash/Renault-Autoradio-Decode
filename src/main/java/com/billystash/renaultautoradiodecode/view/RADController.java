@@ -1,5 +1,6 @@
 package com.billystash.renaultautoradiodecode.view;
 
+import com.billystash.renaultautoradiodecode.C.C;
 import com.billystash.renaultautoradiodecode.process.RenaultAutoradioDecode;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -82,9 +83,9 @@ public class RADController implements Initializable {
      */
     public void openLogs() {
         try {
-            showDialog("Logs", Files.readString(Path.of(new File("RAD.log").getAbsolutePath())));
+            showDialog("Logs", Files.readString(Path.of(new File(C.FILE_LOGS_PATH).getAbsolutePath())));
         } catch (IOException e) {
-            e.printStackTrace();
+           LOGGER.error("Error opening log file {}", C.FILE_LOGS_PATH);
         }
     }
 
