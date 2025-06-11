@@ -5,28 +5,20 @@
     </Properties>
     <Appenders>
         <RollingFile name="fileLogger"
-                     fileName="${basePath}/RAD.log"
-                     filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
+                     fileName="${sys:user.home}/AppData/Local/RAD/log/RAD.log"
+                     filePattern="${sys:user.home}/AppData/Local/RAD/log/RAD.log">
             <PatternLayout>
-                <pattern>[%-5level] %d{dd-MM-yyyy HH:mm:ss} - %msg%n
-                </pattern>
+                <pattern>[%-5level] %d{dd-MM-yyyy HH:mm:ss} - %msg%n</pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="10MB"/>
+                <SizeBasedTriggeringPolicy size="5MB"/>
             </Policies>
-            <!-- Max 10 files will be created everyday -->
-            <DefaultRolloverStrategy max="10">
-                <Delete basePath="${basePathr}" maxDepth="10">
-                    <!-- Delete all files older than 30 days -->
-                    <IfLastModified age="30d"/>
-                </Delete>
-            </DefaultRolloverStrategy>
+            <DefaultRolloverStrategy max="1"/>
         </RollingFile>
     </Appenders>
     <Loggers>
         <Root level="info" additivity="false">
-            <appender-ref ref="fileLogger"/>
+            <AppenderRef ref="fileLogger"/>
         </Root>
     </Loggers>
 </Configuration>
