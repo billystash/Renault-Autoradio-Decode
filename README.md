@@ -7,8 +7,12 @@ This project is a fork from @[kpym](https://github.com/kpym/autoradio-renault) c
 
 ![](https://github.com/billystash/Renault-Autoradio-Decode/blob/master/Install_OpenJDK_var.PNG)
 # Download
--> Download  [Renault.Autoradio.Decode.V1.0.1.exe](https://github.com/billystash/Renault-Autoradio-Decode/releases/tag/V1.0.1)
+-> Download  [Renault.Autoradio.Decode.V1.0.1.zip](https://github.com/billystash/Renault-Autoradio-Decode/releases/tag/V1.0.1)
+
+# Installation
+-> Extract Renault.Autoradio.Decode.V1.0.1.zip
+
 # Launch
--> Launch Renault.Autoradio.Decode.V1.0.1.exe
+-> Launch StartRAD.bat in the extracted folder
 # Screenshot
 ![Screenshot](https://github.com/billystash/Renault-Autoradio-Decode/blob/master/radScreenshot.png)
